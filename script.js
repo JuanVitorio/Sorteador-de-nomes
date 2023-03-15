@@ -33,8 +33,12 @@ function apaga_texto() {
 }
 
 function sortear() {
-  let random = Math.floor(Math.random() * lista_com_nomes.length)
-  sorteado.innerHTML = 'O sorteado é: ' + lista_com_nomes[random]
+  if (lista_com_nomes.length <= 1) {
+    alert('Coloque pelo menos dois nomes')
+  } else {
+    let random = Math.floor(Math.random() * lista_com_nomes.length)
+    sorteado.innerHTML = 'O sorteado é: ' + lista_com_nomes[random]
+  }
 }
 
 btn_adicionar.addEventListener('click', adicionar)
